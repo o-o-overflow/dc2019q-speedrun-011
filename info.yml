@@ -1,14 +1,14 @@
 # Info for the schoreboard
 service_name: "speedrun-011"
-description: "TODO: add public description."
+description: "Rush"
 tags:
-  - pwn
+  - shellcoding
 
 violates_flag_format: false # if this is not "true", the flag is verfied against the flag format
 
 allow_egress: False
 
-flag: "TODO: add flag" # this is the flag of the service
+flag: "OOO{Why___does_th0r__need_a_car?}" # this is the flag of the service
 
 # Type can be normal or king_of_the_hill
 type: normal
