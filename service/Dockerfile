@@ -1,5 +1,5 @@
 from ubuntu:18.04
-run echo "travis_fold:start:Dapt\033[33;1mservice Dockerfile apt\033[0m" &&     apt-get -qq update && apt-get install -qq xinetd &&     echo "\ntravis_fold:end:Dapt\r"
+run echo "travis_fold:start:Dapt\033[33;1mservice Dockerfile apt\033[0m" &&     apt-get -qq update && apt-get install -qq xinetd libseccomp-dev &&     echo "\ntravis_fold:end:Dapt\r"
 
 
 copy speedrun-011 /
