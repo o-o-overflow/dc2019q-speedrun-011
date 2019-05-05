@@ -54,7 +54,9 @@ def build_interactions():
 
 def _start_container():
 	_stop_container()
-	assert os.system("docker run --name %s --rm -d %s" % (container_tag, image_tag)) == 0, "service container failed to start"
+	docker_launch_str = "docker run --name %s --security-opt='seccomp=unconfined' --rm -d %s" % (container_tag, image_tag)
+	_LOG.debug(docker_launch_str)
+	assert os.system(docker_launch_str) == 0, "service container failed to start"
 def _stop_container():
 	os.system("docker kill %s 2>/dev/null >/dev/null" % container_tag)
 	os.system("docker rm %s 2>/dev/null >/dev/null" % container_tag)
