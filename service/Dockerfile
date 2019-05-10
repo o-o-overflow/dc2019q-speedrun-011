@@ -8,6 +8,7 @@ run chmod 755 /speedrun-011
 run touch /flag && chmod 644 /flag && echo "OOO{Why___does_th0r__need_a_car?}" > /flag
 copy service.conf /service.conf
 copy wrapper /wrapper
+copy banner_fail /
 
 expose 31337
 
